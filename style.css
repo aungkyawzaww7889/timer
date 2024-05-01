@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+}
+
+.container{
+
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+.timer{
+    width: 900px;
+    padding: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.timer .time{
+    width: 900px;
+
+    font-size: 90px;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+
+}
+
+
+.start{
+    width: 80px;
+    height: 80px;
+    background-color: steelblue;
+    color: #fff;
+    font-size: 15px;
+    border:none;
+    border-radius: 50%;
+    margin: 0px 10px 0px 10px;
+    cursor: not-allowed;
+
+    text-align: center;
+    line-height: 80px;
+
+    /* position: absolute;
+    top:0;
+    left:0; */
+    
+}
+
+.start.removedisabled,.reset.removedisabled{
+    cursor: pointer;
+}
+
+
+
+
+
+.start:hover,.reset:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.reset{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border:1px solid #555;
+    color: #333;
+    font-size: 15px;
+    border-radius: 50%;
+    cursor: not-allowed;
+
+    text-align: center;
+    line-height: 80px;
+
+    /* position: absolute;
+    top:-90px;
+    right:0; */
+
+    
+}
+
+.showgp{
+    width: 900px;
+    /* background-color: orange; */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.showtimer{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.showtimer .shows{
+    font-size: 18px;
+}
+
+.showtimer a{
+    text-decoration:none;
+    margin-left: 20px;
+    color: steelblue;
+}
+
+.showtimer a:hover{
+    text-decoration: underline;
+}
+
+.progress{
+    width:100%;
+    height: 40px;
+    background-color: steelblue;
+    color: #fff;
+    margin-top:5px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.progressbar{
+    width: 0%;
+    height: 100%;
+    background-color: tomato;
+    line-height: 40px;
+   
+}
+
+
+
+.modal{
+    background:rgba(0,0,0,0.7);
+
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    display: none;
+}
+
+.modal.shownavbars{
+    display: block;
+}
+
+
+.modalcontent{
+    width: 400px;
+    /* height: 400px; */
+    background-color: #f4f4f4;
+
+    position: fixed;
+    top:50%;
+    left:50%;
+
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+.modal .modalheader{
+    background-color: steelblue;
+    color: #fff;
+    padding: 0px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.modalheader span{
+    cursor: pointer;
+}
+
+.form-group{
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group .form-control{
+    width: 100px;
+    height: 40px;
+
+    background:none;
+    border: 1px solid steelblue;
+    border-radius: 10px;
+    font-size: 30px ;
+    text-align: center;
+
+    margin: 10px 20px;
+}
+
+.form-control:focus{
+    outline: none;
+}
+
+.form-group label{
+    display: block;
+}
+
+.label-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-group span{
+    text-align: center;
+    margin: 0px 40px;
+    font-weight: bold;
+}
+
+
+.modalfooter{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    background-color: steelblue;
+
+    position:relative;
+}
+
+.modalfooter .btn{
+    background:none;
+    border:none;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+
+}

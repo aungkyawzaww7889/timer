@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body">
+
+
+    <div class="container">
+        <div class="timer">
+
+            <span id="showtimes" class="time">00 : 00 : 00 : 00</span>
+            <!-- <span id="start" class="start">Start</span> -->
+            <!-- <span id="reset" class="reset">Reset</span> -->
+            <button type="button" id="start" class="start" disabled>Start</button>
+            <button type="button" id="reset" class="reset" disabled>Reset</button>
+        </div>
+
+
+        <div class="showgp">
+            <div class="showtimer">
+                <div class="shows">Timer (00: 00: 00) </div>
+                <a href="#" id="edit"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+            </div>
+    
+            <div class="progress">
+                <div class="progressbar"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal">
+        <div class="modalcontent">
+            <div class="modalheader">
+                <h3>Edit Timer</h3>
+                <span id="cancel"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+    
+    
+            <div class="form-group">
+                <input type="number" name="hour" id="houres" class="form-control" />
+                <span>:</span>
+                <input type="number" name="hour" id="minutes" class="form-control" />
+                <span>:</span>
+                <input type="number" name="hour" id="secondes" class="form-control" />
+    
+            </div>
+    
+            <div class="label-group">
+                <span>Hours</span>
+                <span>Minutes</span>
+                <span>Seconds</span>
+            </div>
+    
+           <div class="modalfooter">
+                <button type="button" id="donebtn" class="btn">Done</button>
+           </div>
+        </div>
+    </div>
+
+
+    <script src="./app.js" type="text/javascript"></script>
+    
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timer</title>
+</head>
+<body>
+<h1>Timer</h1>
+<label for="duration">Enter duration in seconds:</label>
+<input type="number" id="duration" min="1" value="60">
+<button onclick="startTimer()">Start</button>
+<p id="timerDisplay"></p>
+
+<script>
+let timer;
+
+function startTimer() {
+    const durationInput = document.getElementById('duration');
+    const duration = parseInt(durationInput.value);
+    let timeLeft = duration;
+
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById('timerDisplay').textContent = 'Time\'s up!';
+            return;
+        }
+        document.getElementById('timerDisplay').textContent = formatTime(timeLeft);
+        timeLeft--;
+    }, 1000);
+}
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+</script>
+</body>
+</html> -->
